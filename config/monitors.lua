@@ -1,3 +1,11 @@
 -- Monitor configuration
--- Add hl.monitor(...) entries here for future monitor layouts
--- Current layout is managed by scripts/auto-monitor.sh
+-- Layout is managed by scripts/auto-monitor.sh (description-based detection)
+--
+-- Default scale: 1.25
+-- Desktop external scale: 1
+--
+-- Layouts:
+--   Laptop only:               eDP-1 @ 1.25x
+--   Laptop + Arzopa:           eDP-1 left, Arzopa right (portrait, 1.25x)
+--   Laptop + Desktop:          eDP-1 left, external right (1x)
+--   Laptop + Arzopa + Desktop: Arzopa left (portrait), eDP-1 center, external right

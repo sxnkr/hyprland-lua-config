@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
+# Dependencies: jq
+#
+# Monitors topology changes by fingerprinting monitor name + description
+# from Hyprland's structured JSON output. Triggers auto-monitor.sh when
+# the fingerprint changes.
+
 sleep 2
+
+fingerprint=$(hyprctl monitors -j | jq -r '.[] | "\(.name)|\(.description)"' | sort)
+
 while true; do
-  previous=$(hyprctl monitors all | grep -c "(ID [0-9]")
   sleep 1
-  current=$(hyprctl monitors all | grep -c "(ID [0-9]")
-  if [ "$current" -ne "$previous" ]; then
+  new_fingerprint=$(hyprctl monitors -j | jq -r '.[] | "\(.name)|\(.description)"' | sort)
+  if [ "$new_fingerprint" != "$fingerprint" ]; then
     ~/.config/hypr/scripts/auto-monitor.sh
+    fingerprint=$new_fingerprint
   fi
 done
