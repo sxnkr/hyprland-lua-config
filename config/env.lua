@@ -1,0 +1,6 @@
+hl.env("XCURSOR_SIZE", "24")
+hl.env("GTK_THEME", "Graphite-Dark")
+hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("GTK_ICON_THEME", "Papirus-icon-theme")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")

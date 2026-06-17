@@ -1,0 +1,3 @@
+-- Monitor configuration
+-- Add hl.monitor(...) entries here for future monitor layouts
+-- Current layout is managed by scripts/auto-monitor.sh
