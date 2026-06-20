@@ -112,3 +112,6 @@ apply_layout() {
 }
 
 apply_layout "$laptop" "$arzopa" "$other" "$count"
+
+# Restart waybar for per-output configs
+~/.config/waybar/start-waybar.sh

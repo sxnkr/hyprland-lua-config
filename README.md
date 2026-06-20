@@ -3,6 +3,8 @@
 Modular Lua-based Hyprland configuration on Arch Linux.
 Designed for a **34-key Forager split keyboard** — home-row navigation, minimal chords.
 
+Keybindings reference: [`KEYBINDINGS.md`](KEYBINDINGS.md)
+
 ---
 
 ## Directory Tree
