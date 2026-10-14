@@ -1,11 +1,12 @@
 -- Monitor configuration
--- Layout is managed by scripts/auto-monitor.sh (description-based detection)
+-- Layout is managed by scripts/auto-monitor.sh (connector-based detection)
 --
--- Default scale: 1.25
--- Desktop external scale: 1
+-- Laptop panel identified by connector name (eDP-* / LVDS-*)
+-- Arzopa identified by description, all others treated as external
 --
--- Layouts:
---   Laptop only:               eDP-1 @ 1.25x
---   Laptop + Arzopa:           eDP-1 left, Arzopa right (portrait, 1.25x)
---   Laptop + Desktop:          eDP-1 left, external right (1x)
---   Laptop + Arzopa + Desktop: Arzopa left (portrait), eDP-1 center, external right
+-- Layouts (laptop scale depends on count):
+--   1 monitor:               Laptop only @ 1x
+--   2 monitors (+ Arzopa):   Laptop left @ 1x, Arzopa right @ 1x
+--   2 monitors (+ external): Laptop left @ 1x, external right @ 1x
+--   3+ monitors (w/ Arzopa): Arzopa left portrait @ 1x, Laptop center @ 1x, external(s) right @ 1x
+--   3+ monitors (no Arzopa): Laptop left @ 1x, externals right @ 1x

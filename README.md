@@ -32,8 +32,7 @@ Keybindings reference: [`KEYBINDINGS.md`](KEYBINDINGS.md)
 │   └── randowall.sh          # Random wallpaper picker
 │
 ├── hypridle.conf             # Idle management (lock + suspend)
-├── hyprlock.conf             # Lock screen appearance
-└── hyprpaper.conf            # (dead config — awww-daemon in use)
+└── hyprlock.conf             # Lock screen appearance
 ```
 
 ---
@@ -384,8 +383,8 @@ Picks a random image from `~/stuff/wallpaper.sxnkr/desktop.wall/` and sets it vi
 ### `hypridle.conf`
 
 ```
-300s  ──► hyprlock
-900s  ──► systemctl suspend
+21600s (6h)   ──► hyprlock
+23400s (6.5h) ──► systemctl suspend
 ```
 
 ### `hyprlock.conf`
