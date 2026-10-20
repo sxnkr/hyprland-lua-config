@@ -10,6 +10,7 @@ Mod: `SUPER`
 | `SUPER + SHIFT + Return` | Kitty |
 | `SUPER + Space` | Rofi launcher |
 | `SUPER + B` | Brave |
+| `SUPER + G` | Firefox |
 | `SUPER + E` | PCManFM |
 | `SUPER + V` | Clipboard history |
 | `SUPER + ALT + C` | cmus |
@@ -22,6 +23,7 @@ Mod: `SUPER`
 |---|---|
 | `SUPER + Q` | Close window |
 | `SUPER + F` | Toggle fullscreen |
+| `SUPER + SHIFT + F` | Toggle maximize (keeps bar) |
 | `SUPER + S` | Toggle floating |
 | `SUPER + P` | Toggle pseudo tiling |
 | `SUPER + M` | Toggle split layout |
@@ -56,6 +58,8 @@ Mod: `SUPER`
 | `SUPER + 1..0` | Switch to workspace 1-10 |
 | `SUPER + SHIFT + 1..0` | Move window to workspace 1-10 |
 | `SUPER + Tab` | Previous workspace |
+| `ALT + Tab` | Cycle windows (focus next, raise) |
+| `ALT + SHIFT + Tab` | Cycle windows backwards |
 | `SUPER + [` | Previous workspace (cycle) |
 | `SUPER + ]` | Next workspace (cycle) |
 | `SUPER + mouse_down` | Next workspace |
@@ -100,11 +104,12 @@ Mod: `SUPER`
 SUPER + ──────────────────────────────────────────────────
   Return    Terminal           Q     Close
   B         Brave              F     Fullscreen
+  G         Firefox
   E         File Manager       S     Toggle float
   V         Clipboard          P     Pseudo
   W         Window switcher    M     Toggle split
   Space     App launcher       R     Reload
-  Tab       Last workspace     X     Lock screen
+  Tab       Last workspace
   I         Scratchpad         H/L   Focus
   [ / ]     Cycle workspace    J/K   Focus
   grave     Magic scratchpad
@@ -114,7 +119,7 @@ SUPER + SHIFT + ─────────────────────�
   H         Move left          I     Move to scratchpad
   J         Move down          X     Lock screen
   K         Move up            grave Move to magic
-  L         Move right
+  L         Move right         F     Maximize
 
 SUPER + ALT + ────────────────────────────────────────────
   C         cmus               H     Resize shrink
@@ -122,3 +127,15 @@ SUPER + ALT + ──────────────────────
                                K     Resize shrink
                                L     Resize grow
 ```
+
+## From the Forager keyboard
+
+| Action | Keys |
+|---|---|
+| `SUPER + letter` | Hold the home-row Super on the opposite hand (`A` for H J K L I P M, `'` for left-hand letters) |
+| `SUPER + 1..0`, `[`, `]`, `` ` `` | Hold BSPC (NUM) + hold `'` (plain Super), tap the key on the left hand (`0` = left inner thumb) |
+| `SUPER + SHIFT + 1..0` | Same, plus hold `J` (plain Shift) |
+| `SUPER + SHIFT + arrows` | Hold SPACE (NAV) + hold `A` + `F`, tap H/J/K/L |
+| `SUPER + V` (clipboard history) | SPACE (NAV) + `R` |
+| `Print` | `B` + `N` combo |
+| `ALT + Tab` | `W` + `E` combo |

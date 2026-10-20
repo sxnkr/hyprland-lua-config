@@ -27,6 +27,7 @@ hl.bind(mainMod .. " + SHIFT + X",     hl.dsp.exec_cmd("hyprlock"))
 -- Window actions
 hl.bind(mainMod .. " + Q",            hl.dsp.window.close())
 hl.bind(mainMod .. " + F",            hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + F",    hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + S",            hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P",            hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + M",            hl.dsp.layout("togglesplit"))
@@ -36,6 +37,10 @@ hl.bind(mainMod .. " + R",            hl.dsp.exec_cmd("hyprctl reload && sleep 1
 
 -- Focus last workspace
 hl.bind(mainMod .. " + Tab",          hl.dsp.focus({ workspace = "previous" }))
+
+-- Alt+Tab window cycling (Forager W+E combo sends Alt+Tab)
+hl.bind("ALT + Tab",                  hl.dsp.exec_cmd("hyprctl --batch 'dispatch cyclenext ; dispatch bringactivetotop'"))
+hl.bind("ALT + SHIFT + Tab",          hl.dsp.exec_cmd("hyprctl --batch 'dispatch cyclenext prev ; dispatch bringactivetotop'"))
 
 -- Special workspace (scratchpad)
 hl.bind(mainMod .. " + SHIFT + I",    hl.dsp.window.move({ workspace = "special:hidden" }))
