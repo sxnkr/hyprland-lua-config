@@ -7,6 +7,30 @@ Keybindings reference: [`KEYBINDINGS.md`](KEYBINDINGS.md)
 
 ---
 
+## ⚠️ Temporary: External-Display-Only Mode
+
+The laptop screen (`eDP-1`) is broken, so the config currently runs on the external display only:
+
+- `config/monitors.lua` disables `eDP-1` and places the external monitor at `0x0`
+- `config/autostart.lua` no longer starts `monitor-daemon.sh` / `auto-monitor.sh`
+- `config/binds.lua` — `SUPER+R` only reloads (no `auto-monitor.sh`)
+- `config/workspaces.lua` has no workspace pinning
+- `~/.config/waybar/start-waybar.sh` uses the full laptop bar on every output
+
+The original files are saved next to them as `.bak`.
+
+### Restore (after the laptop display is fixed)
+
+```sh
+cd ~/.config/hypr/config && for f in autostart binds monitors workspaces; do mv $f.lua.bak $f.lua; done
+mv ~/.config/waybar/start-waybar.sh.bak ~/.config/waybar/start-waybar.sh
+hyprctl reload && ~/.config/hypr/scripts/auto-monitor.sh
+```
+
+Then delete this section from the README.
+
+---
+
 ## Directory Tree
 
 ```

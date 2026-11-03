@@ -33,7 +33,7 @@ hl.bind(mainMod .. " + P",            hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + M",            hl.dsp.layout("togglesplit"))
 
 -- Reload
-hl.bind(mainMod .. " + R",            hl.dsp.exec_cmd("hyprctl reload && sleep 1 && ~/.config/hypr/scripts/auto-monitor.sh"))
+hl.bind(mainMod .. " + R",            hl.dsp.exec_cmd("hyprctl reload"))
 
 -- Focus last workspace
 hl.bind(mainMod .. " + Tab",          hl.dsp.focus({ workspace = "previous" }))

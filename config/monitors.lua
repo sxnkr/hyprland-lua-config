@@ -1,12 +1,4 @@
--- Monitor configuration
--- Layout is managed by scripts/auto-monitor.sh (connector-based detection)
---
--- Laptop panel identified by connector name (eDP-* / LVDS-*)
--- Arzopa identified by description, all others treated as external
---
--- Layouts (laptop scale depends on count):
---   1 monitor:               Laptop only @ 1x
---   2 monitors (+ Arzopa):   Laptop left @ 1x, Arzopa right @ 1x
---   2 monitors (+ external): Laptop left @ 1x, external right @ 1x
---   3+ monitors (w/ Arzopa): Arzopa left portrait @ 1x, Laptop center @ 1x, external(s) right @ 1x
---   3+ monitors (no Arzopa): Laptop left @ 1x, externals right @ 1x
+-- External-only setup (laptop screen broken)
+-- Original multi-monitor config saved as monitors.lua.bak
+hl.monitor({ output = "eDP-1", disabled = true })
+hl.monitor({ output = "", mode = "preferred", position = "0x0", scale = 1 })
